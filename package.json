@@ -1,8 +1,8 @@
 {
   "name": "find-proxy",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.9.0",
+  "description": "check active proxies from input file",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.src.json",
     "build:test": "rimraf dist && tsc -p tsconfig.spec.json",
@@ -11,9 +11,16 @@
     "prepare": "npm run build",
     "test": "ts-node node_modules/jasmine/bin/jasmine"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["proxy", "socks", "find", "check"],
+  "author": "gebri",
+  "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gebri/find-proxy.git"
+  },
+  "bin": {
+    "find-proxy": "./bin/find-proxy"
+  },
   "devDependencies": {
     "@types/geoip-lite": "^1.4.1",
     "@types/jasmine": "^4.3.0",
@@ -24,6 +31,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "geoip-lite": "^1.4.6"
+    "geoip-lite": "^1.4.6",
+    "rxjs": "^7.5.7"
   }
 }
